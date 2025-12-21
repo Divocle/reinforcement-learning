@@ -73,6 +73,7 @@ $$
 
 **推导**：  
 由全期望公式（Law of Total Expectation）：
+
 $$
 \begin{aligned}
 v_\pi(s) 
@@ -97,7 +98,8 @@ q_\pi(s, a) = R(s, a) + \gamma \sum_{s' \in \mathcal{S}} P(s' \mid s, a) \, v_\p
 \tag{2}
 $$
 
-**推导**：  
+**推导**： 
+ 
 $$
 \begin{aligned}
 q_\pi(s, a) 
