@@ -2,7 +2,6 @@
 layout: post
 title: "强化学习基础：状态价值函数与动作价值函数的定义与关系"
 date: 2025-12-21  # 新增：Jekyll必需的日期字段，确保文章被正确识别
-permalink: /reinforcement-learning/2025/12/21/dynamic-programming.html  # 新增：指定固定URL，避免404
 ---
 # 强化学习基础：状态价值函数与动作价值函数的定义与关系
 
