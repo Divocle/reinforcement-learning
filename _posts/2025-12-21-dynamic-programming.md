@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "强化学习基础：状态价值函数与动作价值函数的定义与关系"
+date: 2025-12-21  # 新增：Jekyll必需的日期字段，确保文章被正确识别
+permalink: /reinforcement-learning/2025/12/21/dynamic-programming.html  # 新增：指定固定URL，避免404
 ---
 # 强化学习基础：状态价值函数与动作价值函数的定义与关系
 
@@ -119,7 +121,7 @@ $$
 $$
 \begin{aligned}
 v_\pi(s) 
-&= \sum_a \pi(a \mid s) \left[ R(s, a) + \gamma \sum_{s'} P(s' \mid s, a) \, v_\pi(s') \right] \\
+&= \sum_{a \in \mathcal{A}} \pi(a \mid s) \left[ R(s, a) + \gamma \sum_{s' \in \mathcal{S}} P(s' \mid s, a) \, v_\pi(s') \right] \\
 &= \mathbb{E}_{a \sim \pi(\cdot|s)} \left[ R(s, a) + \gamma \, \mathbb{E}_{s' \sim P(\cdot|s,a)} [v_\pi(s')] \right]
 \end{aligned}
 \tag{3}
@@ -143,9 +145,9 @@ $$
   $$
   \pi'(s) = \arg\max_{a} q_\pi(s, a)
   $$
-- **最优性条件**：当对所有 $s$ 有
+- **最优性条件**：当对所有 $s \in \mathcal{S}$ 有
   $$
-  v_\pi(s) = \max_a q_\pi(s, a)
+  v_\pi(s) = \max_{a \in \mathcal{A}} q_\pi(s, a)
   $$
   则 $\pi$ 为最优策略 $\pi^*$，对应 **贝尔曼最优方程**。
 
