@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<style>
+  .article table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; /* 建议：使表格边框更美观 */
+  }
+  /* 如果希望表格内的文字也居中，可以取消下面注释 */
+  .article table td, .article table th { text-align: center; } 
+</style>
+
 <article>
   <h1>{{ page.title }}</h1>
   <time>{{ page.date | date: "%Y-%m-%d" }}</time>
